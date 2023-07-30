@@ -45,6 +45,9 @@ pipeline{
               }
           }
 	     
-          
+         tage('Build Image'){
+            steps{
+             sh 'cp var/lib/Jenkins/workspace/ProjectEdureka/target/addressbook.war .'
+               sh 'docker build -t myimagejenkins .' 
       }
 }
