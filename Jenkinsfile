@@ -51,3 +51,5 @@ pipeline{
                sh 'docker build -t myimagejenkins .' 
       }
 }
+      }
+      }
