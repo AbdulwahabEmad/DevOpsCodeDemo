@@ -9,8 +9,8 @@ pipeline{
            stage('Checkout the code'){
 	    
                steps{
-		 echo 'cloning the repo'
-                 git 'https://github.com/AbdulwahabEmad/DevOpsCodeDemo.git'
+		        echo 'cloning the repo'
+                git 'https://github.com/AbdulwahabEmad/DevOpsCodeDemo.git'
               }
           }
           stage('Compile'){
@@ -45,7 +45,7 @@ pipeline{
               }
           }
 	     
-         tage('Build Image'){
+         stage('Build Image'){
             steps{
              sh 'cp var/lib/Jenkins/workspace/ProjectEdureka/target/addressbook.war .'
                sh 'docker build -t myimagejenkins .' 
